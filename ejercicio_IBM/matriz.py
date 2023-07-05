@@ -32,16 +32,25 @@ def sumar_columnas(rellenar):
         columnas.append(suma_columna)
     return columnas
 
+# Creamos una excepcion para los errores de los valores 0, numero negativo y un caracter string
+# Metemos dentro de la excepcion todo el codigo de ejecucion del programa
+try:
+   # Pedimos al usuario que introduzca un numero 
 
-# Pedimos al usuario que introduzca un numero 
-num = int(input("Introduce  un  numero : \n"))
-
-# Creamos la varibale rellenar para mostrar la matriz
-rellenar = n_matriz(num)
-
-# Mostramos por pantalla la matriz generada
-print('la matriz genenerada es :', rellenar)
+   num = int(input("Introduce  un  numero : \n"))
+   # Creamos la varibale rellenar para mostrar la matriz
+   
+   rellenar = n_matriz(num)
+  # Mostramos por pantalla la matriz generada
+   
+   print('la matriz genenerada es :', rellenar)
 
 # Mostramos por pantalla la suma de filas y columnas
-print('la suma de las filas es :', sumar_filas(rellenar))
-print('la suma de las columnas es :', sumar_columnas(rellenar))
+   print('la suma de las filas es :', sumar_filas(rellenar))
+   print('la suma de las columnas es :', sumar_columnas(rellenar))
+   
+except IndexError : 
+    print('El numero introducido es erroneo')
+
+except ValueError :
+    print('El numero introducido es erroneo')
